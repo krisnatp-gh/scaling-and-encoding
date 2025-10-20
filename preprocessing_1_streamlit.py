@@ -241,11 +241,11 @@ with st.container():
                 
                 metric_col1, metric_col2 = st.columns(2)
                 with metric_col1:
-                    st.metric("Train Min", numerize(train_min, 2))
-                    st.metric("Train Max", numerize(train_max, 2))
+                    st.metric("Train Min", numerize(float(train_min), 2))
+                    st.metric("Train Max", numerize(float(train_max), 2))
                 with metric_col2:
-                    st.metric("Test Min", numerize(test_min, 2))
-                    st.metric("Test Max", numerize(test_max, 2))
+                    st.metric("Test Min", numerize(float(test_min), 2))
+                    st.metric("Test Max", numerize(float(test_max), 2))
                     
             elif scaler_method == "StandardScaler":
                 train_mean = X_train[column_selection].mean()
@@ -255,11 +255,11 @@ with st.container():
                 
                 metric_col1, metric_col2 = st.columns(2)
                 with metric_col1:
-                    st.metric("Train Mean", numerize(train_mean, 2))
-                    st.metric("Train Std", numerize(train_std, 2))
+                    st.metric("Train Mean", numerize(float(train_mean), 2))
+                    st.metric("Train Std", numerize(float(train_std), 2))
                 with metric_col2:
-                    st.metric("Test Mean", numerize(test_mean, 2))
-                    st.metric("Test Std", numerize(test_std, 2))
+                    st.metric("Test Mean", numerize(float(test_mean), 2))
+                    st.metric("Test Std", numerize(float(test_std), 2))
                     
             else:  # RobustScaler
                 train_median = X_train[column_selection].median()
@@ -274,11 +274,11 @@ with st.container():
                 
                 metric_col1, metric_col2 = st.columns(2)
                 with metric_col1:
-                    st.metric("Train Median", numerize(train_median, 2))
-                    st.metric("Train IQR", numerize(train_iqr, 2))
+                    st.metric("Train Median", numerize(float(train_median), 2))
+                    st.metric("Train IQR", numerize(float(train_iqr), 2))
                 with metric_col2:
-                    st.metric("Test Median", numerize(test_median, 2))
-                    st.metric("Test IQR", numerize(test_iqr, 2))
+                    st.metric("Test Median", numerize(float(test_median), 2))
+                    st.metric("Test IQR", numerize(float(test_iqr), 2))
             
             # Create histogram with box plot
             fig = make_subplots(
