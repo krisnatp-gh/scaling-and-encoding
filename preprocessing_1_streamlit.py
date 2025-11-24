@@ -182,7 +182,7 @@ with st.container():
             st.latex(r"x^\text{new} = \frac{x-\text{mean}(x_\text{train})}{\text{std}(x_\text{train})}")
         else:  # RobustScaler
             st.latex(r"""\begin{aligned}
-            x^\text{new} &= \frac{x-\text{median}(x_\text{train}}{\text{Q}_3(x_\text{train}) - \text{Q}_1(x_\text{train})} \qquad \begin{array}{l}
+            x^\text{new} &= \frac{x-\text{median}(x_\text{train})}{\text{Q}_3(x_\text{train}) - \text{Q}_1(x_\text{train})} \qquad \begin{array}{l}
             \text{Q}_1: \text{first quartile} \\
             \text{Q}_3: \text{third quartile}
             \end{array} \\
