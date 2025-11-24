@@ -187,7 +187,7 @@ with st.container():
             \text{Q}_3: \text{third quartile}
             \end{array} \\
             \\
-            &= \frac{x-\text{Q}_1(x_\text{train})}{\text{IQR}(x_\text{train})}
+            &= \frac{x-\\text{median}(x_\text{train})}{\text{IQR}(x_\text{train})}
             \end{aligned}""")
 
         # Apply scaling
