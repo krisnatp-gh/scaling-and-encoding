@@ -452,9 +452,10 @@ with st.container():
             
             # Create column names
             if drop_first:
-                encoded_columns = [f"{column_selection}_{cat}" for cat in unique_categories[1:]]
+                encoded_columns = [f"{column_selection}_{cat}" for cat in encoder.categories_[0][1:]]
             else:
-                encoded_columns = [f"{column_selection}_{cat}" for cat in unique_categories]
+                encoded_columns = [f"{column_selection}_{cat}" for cat in encoder.categories_[0]]
+
             
             X_train_encoded = pd.DataFrame(
                 X_train_encoded,
